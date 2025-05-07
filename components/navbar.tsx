@@ -34,7 +34,7 @@ export default function Navbar({ activeSection, scrollToSection }: NavbarProps) 
 
   const handleDownloadResume = () => {
     // In a real implementation, this would link to an actual resume file
-    alert("Resume download functionality would be implemented here")
+  
   }
 
   return (
@@ -89,7 +89,9 @@ export default function Navbar({ activeSection, scrollToSection }: NavbarProps) 
               transition={{ delay: 0.6 }}
             >
               <Button onClick={handleDownloadResume} className="bg-neon-blue hover:bg-neon-blue/80 text-white">
+              <a href="/prim sajun.pdf" download>
                 <Download className="mr-2 h-4 w-4" /> Resume
+              </a>
               </Button>
             </motion.div>
           </nav>
@@ -136,8 +138,9 @@ export default function Navbar({ activeSection, scrollToSection }: NavbarProps) 
               <Button
                 onClick={handleDownloadResume}
                 className="bg-neon-blue hover:bg-neon-blue/80 text-white w-full mt-4"
-              >
+              ><a href="/prim sajun.pdf" download>
                 <Download className="mr-2 h-4 w-4" /> Download Resume
+              </a>
               </Button>
             </nav>
           </div>

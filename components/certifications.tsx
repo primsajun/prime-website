@@ -14,17 +14,17 @@ export default function Certifications() {
     {
       title: "JavaScript Foundations Professional Certificate",
       issuer: "Mozilla",
-      date: "2023",
+      date: "2025",
       description:
-        "Comprehensive certification covering JavaScript fundamentals, advanced concepts, and best practices for web development.",
+        "Comprehensive certification covering JavaScript fundamentals, advanced concepts, and best practices for web development (check out my LinkedIn for more details).",
       link: "https://www.linkedin.com/learning/certificates/b8e1f6c4306921abb8b928971c698ba344b4fce70c1d6d2fbb25e689ed857d10",
     },
     {
       title: "AWS Academy Graduate - AWS Academy Cloud Foundations",
       issuer: "Amazon Web Services",
-      date: "2022",
+      date: "2024",
       description:
-        "Professional certification validating technical expertise in AWS cloud services, architecture, and deployment strategies.",
+        "Professional certification validating technical expertise in AWS cloud services, architecture, and deployment strategies (check out my LinkedIn for more details).",
       link: "https://www.credly.com/badges/2503aa56-9a81-4ff0-a6ff-80542c279b62",
     },
   ]
@@ -63,7 +63,7 @@ export default function Certifications() {
         <div className="w-20 h-1 bg-neon-purple mx-auto mb-6"></div>
         <p className="text-gray-400 max-w-2xl mx-auto">
           I continuously enhance my skills through professional certifications and courses, staying current with the
-          latest web technologies and cloud services.
+          latest web technologies and cloud services.(check out my LinkedIn for more details)
         </p>
       </motion.div>
 
@@ -92,7 +92,7 @@ export default function Certifications() {
                 <p className="text-neon-purple font-medium mb-3">{cert.issuer}</p>
                 <p className="text-gray-400">{cert.description}</p>
               </CardContent>
-              <CardFooter>
+              {/* <CardFooter>
                 <Button
                   variant="outline"
                   size="sm"
@@ -101,7 +101,7 @@ export default function Certifications() {
                 >
                   View Certificate <ExternalLink size={14} className="ml-2" />
                 </Button>
-              </CardFooter>
+              </CardFooter> */}
             </Card>
           </motion.div>
         ))}

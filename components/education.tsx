@@ -13,20 +13,20 @@ export default function Education() {
     {
       degree: "B.E. Computer Science Engineering",
       institution: "Stella Mary's College of Engineering",
-      year: "2020 - 2024",
+      year: "pursuing",
       description:
         "Specialized in computer science and engineering with a focus on software development, algorithms, and web technologies.",
     },
     {
       degree: "Computer Science",
       institution: "St. Bernadetthe's H.S. School",
-      year: "2018 - 2020",
+      year: "2021",
       description: "Completed higher secondary education with a focus on computer science, mathematics, and physics.",
     },
     {
       degree: "Secondary Education",
       institution: "St. Bernadetthe's H.S. School",
-      year: "2017 - 2018",
+      year : "2019",
       description: "Completed secondary education with distinction in science and mathematics.",
     },
   ]
