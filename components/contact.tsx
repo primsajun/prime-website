@@ -12,6 +12,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null)
+  const formRef = useRef<HTMLFormElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -22,7 +23,7 @@ export default function Contact() {
 
     try {
       const formData = new FormData(e.currentTarget)
-      const response = await fetch("https://formspree.io/f/xyzwjkeo", {
+      const response = await fetch("https://formspree.io/f/mkgregka", {
         method: "POST",
         body: formData,
         headers: {
@@ -32,13 +33,16 @@ export default function Contact() {
 
       if (response.ok) {
         setIsSubmitted(true)
-        e.currentTarget.reset()
+        // Use the formRef instead of e.currentTarget
+        if (formRef.current) {
+          formRef.current.reset()
+        }
       } else {
         alert("Form submission failed. Please try again.")
       }
     } catch (error) {
       console.error("Error submitting form:", error)
-      alert("you're welcome.")
+      alert("An error occurred. Please try again.")
     } finally {
       setIsSubmitting(false)
     }
@@ -153,7 +157,7 @@ export default function Contact() {
                   </Button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6" method="POST">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6" method="POST">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-white">
@@ -162,7 +166,7 @@ export default function Contact() {
                       <Input
                         id="name"
                         name="name"
-                        placeholder="prim sajun"
+                        placeholder="prime"
                         className="bg-black/70 border-gray-700 focus:border-neon-blue"
                         required
                       />
@@ -175,7 +179,7 @@ export default function Contact() {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="primsajun@example.com"
+                        placeholder="prime@example.com"
                         className="bg-black/70 border-gray-700 focus:border-neon-blue"
                         required
                       />
